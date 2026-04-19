@@ -29,6 +29,6 @@ while True:
     pygame.display.update()
     pygame.time.wait(5000)
     screen.blit(image2Sca,(0,0))
-    screen.blit(text3,(130,326))
+    screen.blit(text3,(110,326))
     pygame.display.update()
     pygame.time.wait(5000)
