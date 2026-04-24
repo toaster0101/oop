@@ -19,6 +19,22 @@ image2Sca=pygame.transform.scale(image2,(400,400))
 font2=pygame.font.SysFont("magneto",25)
 text3=font2.render("Birthday Wishes",True,"blue")
 
+image3=pygame.image.load("birthday greetings/images/birthday3.jpg")
+image3Sca=pygame.transform.scale(image3,(400,400))
+font3=pygame.font.SysFont("harrington",25)
+text4=font3.render("You've made it through another year",True,"blue")
+
+image4=pygame.image.load("birthday greetings/images/birthday4.jpg")
+image4Sca=pygame.transform.scale(image4,(400,400))
+font4=pygame.font.SysFont("broadway",25)
+text5=font4.render("Have a Lovely Day",True,"blue")
+
+image5=pygame.image.load("birthday greetings/images/birthday5.png")
+image5Sca=pygame.transform.scale(image4,(400,400))
+font5=pygame.font.SysFont("script",25)
+text6=font5.render("Have a Great Year Ahead",True,"blue")
+text6r=pygame.transform.rotate(text2,15)
+
 while True:
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
@@ -30,5 +46,17 @@ while True:
     pygame.time.wait(5000)
     screen.blit(image2Sca,(0,0))
     screen.blit(text3,(110,326))
+    pygame.display.update()
+    pygame.time.wait(5000)
+    screen.blit(image3Sca,(0,0))
+    screen.blit(text4,(110,150))
+    pygame.display.update()
+    pygame.time.wait(5000)
+    screen.blit(image4Sca,(0,0))
+    screen.blit(text5(110,150))
+    pygame.display.update()
+    pygame.time.wait(5000)
+    screen.blit(image5Sca,(0,0))
+    screen.blit(text6r(110,150))
     pygame.display.update()
     pygame.time.wait(5000)

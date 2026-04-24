@@ -3,7 +3,6 @@ pygame.init()
 WIDTH=400
 HEIGHT=400
 screen=pygame.display.set_mode((WIDTH,HEIGHT))
-#clock=pygame.time.Clock()
 timeStart=pygame.time.get_ticks()
 bg=pygame.image.load("game1/images/bg.png")
 screen.blit(bg,(0,0))
@@ -18,6 +17,7 @@ font2=pygame.font.SysFont("broadway",25)
 text2=font2.render("(Gameover)",True,"white")
 
 star=pygame.image.load("game1/images/star.png")
+star=pygame.transform.scale(star,(100,100))
 #print(pygame.font.get_fonts())
 
 while gameover:
@@ -47,12 +47,10 @@ while gameover:
         gameover=False
     else:
         if pygame.time.get_ticks()-timeStart>2000:
-            
             screen.blit(bg,(0,0))
             screen.blit(star,(0,0))
+            screen.blit(rocket,(x,y))
             pygame.display.update()
-            pygame.time.wait(10000)
-            gameover=False
         else:
             screen.blit(bg,(0,0))
         screen.blit(rocket,(x,y))
