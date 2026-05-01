@@ -86,9 +86,9 @@ while True:
     screen.blit(bg,(0,0))
     pygame.draw.line(screen,"black",(300,0),(300,400),10)
     screen.blit(spaceship1,(hitbox1[0]-3,hitbox1[1]-9))
-    pygame.draw.rect(screen,"red",hitbox1,2)
+    #pygame.draw.rect(screen,"red",hitbox1,2)
     screen.blit(spaceship2,(hitbox2[0]-3,hitbox2[1]-9))
-    pygame.draw.rect(screen,"red",hitbox2,2)
+    #pygame.draw.rect(screen,"red",hitbox2,2)
     for i in bulletListY:
         if i.x>600:
             bulletListY.remove(i)
