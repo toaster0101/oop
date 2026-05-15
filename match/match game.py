@@ -96,6 +96,9 @@ while True:
             clickedImgRect=False
     scoreNoHitbox=font1.render("Score = "+str(score),True,"black")
     scoreText=pygame.Rect(10,10,1,1)
+    whiteB=pygame.Rect(0,0,200,50)
+    screen.blit(scoreNoHitbox,(scoreText))
+    pygame.draw.rect(screen,"white",whiteB)
     screen.blit(scoreNoHitbox,(scoreText))
     screen.blit(candyNohitbox,(candy))
     screen.blit(ludoNohitbox,(ludo))
