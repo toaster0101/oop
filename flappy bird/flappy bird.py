@@ -92,6 +92,17 @@ while True:
             pygame.quit()
         if event.type==pygame.MOUSEBUTTONDOWN and not gameover:
             flying=True
+        if event.type==pygame.MOUSEBUTTONDOWN and gameover:
+            pos=pygame.mouse.get_pos()
+            r1=pygame.Rect(pos[0]-2,pos[1]+2,4,4)
+            if r1.colliderect(restartHit):
+                gameover=False
+                flying=False
+                bird_group=pygame.sprite.Group()
+                mainBird=birdAnim(150,300)
+                bird_group.add(mainBird)
+                for i in pipe_group:
+                    i.kill()
     screen.blit(background,(0,-100))
     currentTime=pygame.time.get_ticks()
     if (currentTime-lastPipe)>pipeFrec and flying and not gameover:
