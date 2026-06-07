@@ -101,6 +101,7 @@ while True:
                 bird_group=pygame.sprite.Group()
                 mainBird=birdAnim(150,300)
                 bird_group.add(mainBird)
+                score=0
                 for i in pipe_group:
                     i.kill()
     screen.blit(background,(0,-100))
